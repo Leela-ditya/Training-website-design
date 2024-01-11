@@ -1,0 +1,257 @@
+/* importing poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* root css */
+:root {
+  --landing--backgroundColor: #fdfbff;
+  --icon-color: #06285e;
+  --bg-img: #fdfbff;
+  --border-color: #06285e75;
+  --heading-color: #000000;
+  --landing-text-color: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.sub-container {
+  display: flex;
+}
+
+/* Overview Section */
+.overview-section-heading h2 span {
+  color: var(--icon-color);
+}
+
+.overview-content p {
+  color: var(--heading-color);
+  line-height: 1.5rem;
+  padding-bottom: 20px;
+}
+
+/* Skill Section */
+.skill-section {
+  background-color: var(--landing--backgroundColor);
+}
+
+.skill-section-heading h2 span {
+  color: var(--icon-color);
+}
+
+.skills-icons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.skills-icons span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.skills-icons span i {
+  font-size: 30px;
+  color: var(--icon-color);
+  margin-right: 10px;
+}
+
+/* Modules */
+.modules-heading h2 {
+  color: var(--heading-color);
+}
+
+.modules-content {
+  margin-top: 20px;
+}
+
+/* Skills Covered & Tools Covered */
+.skills-covered,
+.tools-covered {
+  background-color: var(--landing--backgroundColor);
+}
+
+.skills-covered-heading h2,
+.tools-covered-heading h2 {
+  color: var(--heading-color);
+}
+
+.skills-content,
+.tools-content {
+  display: grid;
+}
+
+.skill-subcontent,
+.tools-subcontent {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skills,
+.tools {
+  border: 0.1px solid grey;
+  border-radius: 2px;
+  border-left: 5px solid var(--icon-color);
+  font-weight: bold;
+  color: var(--heading-color);
+  padding: 5px 25px;
+}
+
+/* Operations */
+.placement h2 {
+  color: var(--heading-color);
+}
+
+.placement-content p {
+  color: var(--heading-color);
+}
+
+.top-institutes {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 3rem;
+  border-radius: 5px;
+  /* background-color: var(--landing--backgroundColor); */
+  width: 450px;
+  overflow: hidden;
+  position: sticky;
+  top: 5px;
+}
+
+.institute-title {
+  line-height: 2.5rem;
+  color: var(--bg-img);
+  padding-left: 10px;
+  border: 2px solid rgb(120, 120, 120, 0.05);
+  background: url(images/banner-bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.institute-names {
+  display: grid;
+  gap: 10px;
+  padding: 0.8rem;
+  list-style-type: none;
+}
+
+.institute-names li span img {
+  width: 55px;
+  border-radius: 50%;
+  border: 4px solid rgb(120, 120, 120, 0.05);
+}
+
+.institute {
+  /* border: 2px solid var(--border-color); */
+  /* padding-right: .5rem; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 1.3rem;
+  background-color: var(--bg-img);
+  color: var(--heading-color);
+  font-weight: 800;
+}
+
+.institute-names li {
+  font-size: 15px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .institute-names {
+    gap: 6px;
+  }
+
+  .top-institutes {
+    width: 300px;
+  }
+
+  .institute-names li span img {
+    width: 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* .sub-container{
+    flex-direction: column;
+  } */
+
+  .skills-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-subcontent-1 {
+    margin: 10px 0px;
+  }
+
+  .overview-content,
+  .skill-section,
+  .modules,
+  .skills-covered,
+  .tools-covered,
+  .placement {
+    padding: 1rem !important;
+  }
+
+  .skill-subcontent-2 {
+    margin-top: 0px;
+  }
+
+  .top-institutes {
+    margin-top: 2rem;
+    margin-left: 0px;
+  }
+
+  .institute-names li {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .sub-container {
+    flex-direction: column;
+    padding: 1rem !important;
+  }
+
+  /* skill section */
+  .skills-icons {
+    grid-template-columns: 1fr;
+  }
+
+  .p5 {
+    padding: 1rem !important;
+  }
+
+  .modules {
+    margin-top: 20px;
+  }
+  /* overall section */
+  .overview-section,
+  .skill-section,
+  .modules,
+  .skills-covered,
+  .tools-covered,
+  .placement {
+    padding: 0.5rem 0.5rem !important;
+  }
+
+  .top-institutes {
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+  }
+
+  .institute-names {
+    grid-template-columns: 1fr;
+  }
+
+  .institute-names li {
+    font-size: 12px !important;
+  }
+
+  .placement {
+    margin-top: 20px;
+  }
+}
